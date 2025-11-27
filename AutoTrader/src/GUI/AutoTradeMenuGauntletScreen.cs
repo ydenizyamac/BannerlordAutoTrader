@@ -4,8 +4,8 @@ using TaleWorlds.Engine;
 using TaleWorlds.Engine.GauntletUI;
 using TaleWorlds.InputSystem;
 using TaleWorlds.Library;
-using TaleWorlds.ScreenSystem;
 using TaleWorlds.MountAndBlade.View.Screens;
+using TaleWorlds.ScreenSystem;
 
 namespace AutoTrader
 {
@@ -38,7 +38,7 @@ namespace AutoTrader
 			this._viewModel = new AutoTraderMenuViewModel(new System.Action(this.CloseAutoTraderScreen));
 
 			// Add and configure layers
-			this._gauntletLayer = new GauntletLayer(1, "GauntletLayer");
+			this._gauntletLayer = new GauntletLayer("GauntletLayer", 1);
 
 			this._gauntletLayer.InputRestrictions.SetInputRestrictions(true, InputUsageMask.All);
 			this._gauntletLayer.Input.RegisterHotKeyCategory(HotKeyManager.GetCategory("GenericCampaignPanelsGameKeyCategory"));
